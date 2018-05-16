@@ -1,0 +1,41 @@
+# Server settings ：后面必须有空格
+server:
+    port: 9999
+    address: localhost
+# SPRING PROFILES
+spring:     
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false
+        username: root
+        password: liusu9686
+    # HTTP ENCODING
+    http:
+        encoding.charset: UTF-8
+        encoding.enabled: true
+        encoding.force: true
+    mail:
+      host: smtp.exmail.qq.com 
+      username: 123
+      password: 123
+      properties:
+       mail:  
+        smtp:  
+          auth: true  
+          port: 465
+          starttls:  
+            enable: true  
+            required: true 
+
+# MyBatis
+mybatis:
+    mapper-locations: classpath:/mapper/*.xml
+    type-aliases-package: com.lotus.model
+    #typeAliasesPackage: com.lotus.model
+    #mapperLocations: classpath:/com/lotus/mapper/*.xml
+    configLocation: classpath:/mybatis-config.xml
+
+# LOGGING
+logging:
+    level:
+       com.lotus.dao: INFO,DEBUG
