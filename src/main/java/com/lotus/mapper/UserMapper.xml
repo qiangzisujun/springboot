@@ -9,6 +9,7 @@
     <result column="create_date" property="createDate" jdbcType="DATE" />
     <result column="last_modified_by" property="lastModifiedBy" jdbcType="VARCHAR" />
     <result column="last_modified_date" property="lastModifiedDate" jdbcType="DATE" />
+    <collection property="roles" select="getRoleByUserId" column="id" ofType="com.lotus.model.Role"></collection>
   </resultMap>
   <sql id="Base_Column_List" >
     id, username, password, create_by, create_date, last_modified_by, last_modified_date

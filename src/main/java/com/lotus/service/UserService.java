@@ -1,8 +1,8 @@
 package com.lotus.service;
 
-import java.util.List;
-
 import com.lotus.model.User;
+
+import java.util.List;
 
 public interface UserService {
 	int deleteByPrimaryKey(String id);

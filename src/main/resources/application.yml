@@ -14,19 +14,22 @@ spring:
         encoding.charset: UTF-8
         encoding.enabled: true
         encoding.force: true
+    devtools:
+        restart:
+          enabled: true
     mail:
-      host: smtp.exmail.qq.com 
-      username: 123
-      password: 123
+      host: smtp.qq.com
+      username: 1255769116@qq.com
+      password: gvgjhndrzzalbafc
+      protocol: smtp
+      port: 25
       properties:
-       mail:  
-        smtp:  
-          auth: true  
-          port: 465
-          starttls:  
-            enable: true  
-            required: true 
-
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
+              required: true
 # MyBatis
 mybatis:
     mapper-locations: classpath:/mapper/*.xml

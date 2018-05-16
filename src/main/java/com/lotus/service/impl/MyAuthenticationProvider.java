@@ -1,10 +1,8 @@
 package com.lotus.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.servlet.http.HttpSession;
-
+import com.lotus.dao.UserMapper;
+import com.lotus.model.Role;
+import com.lotus.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +15,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
-import com.lotus.dao.UserMapper;
-import com.lotus.model.Role;
-import com.lotus.model.User;
+import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class MyAuthenticationProvider implements AuthenticationProvider {
